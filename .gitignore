@@ -1,0 +1,4 @@
+#No cmake file
+cmake-build-debug
+.vscode
+.idea
