@@ -2,7 +2,7 @@
 using namespace std;
 
 template <typename T>
-void swap(T& a,T& b){
+void zamien(T& a,T& b){
     T temp;
     temp = a;
     a = b;
@@ -19,7 +19,8 @@ void print(T1 a, T2 b[], const int size){
 
 int main(){
     int a = 1, b = 2;
-    int swap(int a, int b);
+    // Używamy polskiego nazewnistwa funkcji by nie nadpisywać funkcji wbudowanej swap
+    zamien(a, b);
     cout << a << b;
     return 0;
 }
