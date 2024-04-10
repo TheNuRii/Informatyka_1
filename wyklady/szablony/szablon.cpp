@@ -2,7 +2,7 @@
 using namespace std;
 
 template <typename T>
-void swap(T &a, T &b){
+void swap(T& a,T& b){
     T temp;
     temp = a;
     a = b;
@@ -18,8 +18,8 @@ void print(T1 a, T2 b[], const int size){
 }
 
 int main(){
-    int a, b;
-    cin >> a >> b;
-    swap(a, b);
+    int a = 1, b = 2;
+    int swap(int a, int b);
+    cout << a << b;
     return 0;
 }
