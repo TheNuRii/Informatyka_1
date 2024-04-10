@@ -19,6 +19,8 @@ void print (int a){
 void print(string a){
     cout << a << endl;
 }
+// Funkcja typu inline
+inline double square(double x) {return x * x;}
 
 int main(){
 
