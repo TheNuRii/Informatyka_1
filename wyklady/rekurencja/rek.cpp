@@ -25,7 +25,7 @@ int nwd(int x, int y){
     return nwd(y, x%y);
 }
 
-// wierza
+// wierza hanoi
 void move(int n, char from, char to, char aux){
     static int counter = 0;
     if (n == 1){
