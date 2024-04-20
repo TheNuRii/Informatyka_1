@@ -28,6 +28,24 @@ void selection_sort(int tab[], const int size){
     }
 }
 
+void bubble_sort(int tab[], const int size){
+    for (int i = 0; i < size; ++i)
+}
+
+
+// Sortowanie koktajlowe
+
+void coctail_sort(int tab[], const int size){
+    int bottom = 0, top = size - 1;
+    bool replace = true;
+
+    while (replace){
+        replace = false;
+    }
+
+}
+
+// Sortowanie metoda Shella
 
 int main(){
     return 0;
