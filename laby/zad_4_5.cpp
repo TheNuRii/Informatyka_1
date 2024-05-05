@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int main(){cd
+int main(){
     int N;
     cout << "Podaj rozmiar macierzy: ";
     cin >> N;
