@@ -10,12 +10,12 @@ void zamiana(string &pierwsze_slow, string &drugie_slow){
 bool czy_zamienic(string slowo_1, string slowo_2){
     int slowo_1_acii = int(slowo_1[0]);
     int slowo_2_ascii = int(slowo_2[0]);
-    cout << slowo_1_acii << ' ' << slowo_2_ascii << endl;
+    //cout << slowo_1_acii << ' ' << slowo_2_ascii << endl;
+    //cout << slowo_1 << ' ' << slowo_2 << endl;
     if (slowo_1.length() > slowo_2.length()){
         return true;
     }
-
-    else if (slowo_1.length() == slowo_2.length() && slowo_1_acii < slowo_2_ascii) {
+    else if (slowo_1.length() == slowo_2.length() && slowo_1_acii > slowo_2_ascii) {
         return true;
     }
 
@@ -24,17 +24,15 @@ bool czy_zamienic(string slowo_1, string slowo_2){
 
 void selcet_sort(string imiona[], const int N){
     int min_index;
-    for (int i = 0; i < N - 1; ++i){
+    for (int i = 0; i < N; ++i){
         min_index = i;
         for (int j = i; j < N; ++j){
-            if (imiona[j].length() < imiona[min_index].length()){
+            if (czy_zamienic(imiona[min_index], imiona[j])){
                 min_index = j;
             }
         }
-        //cout << imiona[min_index] << endl;
-        if (czy_zamienic(imiona[i], imiona[min_index])){
-            zamiana(imiona[i], imiona[min_index]);
-        }
+        //cout << imiona[min_index].length() << endl;
+        zamiana(imiona[i], imiona[min_index]);
     }
 }
 
