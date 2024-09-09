@@ -2,6 +2,32 @@
 #include <iostream>
 using namespace std;
 
+void insert(double value, double heap[], int& heap_size, const int HEAP_MAX){
+    int child = ++heap_size;
+    int parent = child / 2;
+    while (parent && heap[parent] > value){
+        heap[child] = heap[parent];
+        child = parent;
+        parent / 2;
+    }
+    heap[child] = value;
+}
+
+int min_child(const int heap[], int parent, int heap_size) {
+    int left = 2 * parent;
+    int right = left + 1;
+    if (left > heap_size) return 0;
+    if(right > heap_size || heap[left] < heap[right])
+        return left;
+    return right;
+}
+
+void remove_min(double heap[], int& heap_size){
+    double last = heap[heap_size--];
+    int temp = 1;
+    int min_child_idx = min_child(reinterpret_cast<const int *>(heap), 1, heap_size);
+}
+
 void swap(int &a, int &b){
     int c = a;
     a = b;
